@@ -1,7 +1,24 @@
 public class Main {
     public static void main(String[] args) {
         MyArrayList<Integer> myList = new MyArrayList<>();
+        MyStack<Integer> stack = new MyStack<>();
 
+        // Testing MyStack
+        stack.push(12);
+        stack.push(23);
+        stack.push(34);
+
+        // Print the top item of the stack
+        System.out.println("Top item of the stack: " + stack.peek());
+
+        // Pop items from the stack
+        System.out.println("Popped item: " + stack.pop());
+        System.out.println("Popped item: " + stack.pop());
+
+        // Check if the stack is empty
+        System.out.println("Is the stack empty? " + stack.isEmpty());
+
+        // Testing MyArrayList
         // Adding elements
         myList.add(25);
         myList.add(30);
