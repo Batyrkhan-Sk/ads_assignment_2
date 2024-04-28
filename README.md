@@ -2,6 +2,7 @@
 
 **MyArrayList**
 This class provides methods for adding, getting, setting and removing elements. 
+
 Usage:
 ```
 MyArrayList<Integer> myList = new MyArrayList<>();
@@ -51,6 +52,7 @@ System.out.println("Last element of the list: " + myList.getLast());
 
 **MyLinkedList(Doubly)**
 This class also includes methods for adding, getting, setting, removing elements.
+
 Usage:
 ```
 MyLinkedList<Integer> linkedList = new MyLinkedList<>();
@@ -71,6 +73,7 @@ while (iterator.hasNext()) {
 **MyQueue**
 'MyQueue' class is linked list implementation, follows the FIFO(First In, First Out) principle.
 Class includes methods for enqueueing, dequeueing, and peeking at elements.
+
 Usage:
 ```
 MyQueue<Integer> queue = new MyQueue<>();
@@ -97,6 +100,7 @@ System.out.println("The stack is empty: " + stack.isEmpty());
 ```
 **MyMinHeap**
 'MyMinHeap' class is an implementation of a min-heap, it maintains the minimum element at the root of the heap. The class provides methods for inserting elements, extracting the minimum element, returning the minimum element.
+
 Usage:
 ```
 MyMinHeap<Integer> minHeap = new MyMinHeap<>();
