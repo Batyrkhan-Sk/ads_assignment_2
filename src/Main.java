@@ -1,8 +1,30 @@
+import java.util.Iterator;
+
 public class Main {
     public static void main(String[] args) {
         MyArrayList<Integer> myList = new MyArrayList<>();
+        MyLinkedList<Integer> linkedList = new MyLinkedList<>();
         MyStack<Integer> stack = new MyStack<>();
         MyMinHeap<Integer> minHeap = new MyMinHeap<>();
+        MyQueue<Integer> queue = new MyQueue<>();
+
+
+        // Testing MyQueue
+        // Enqueue elements into the queue
+        queue.enqueue(43);
+        queue.enqueue(21);
+        queue.enqueue(38);
+
+        // Peek at the front element without removing it
+        System.out.println("Peeked element: " + queue.peek());
+
+        // Dequeue and print elements from the queue
+        while (!queue.isEmpty()) {
+            System.out.println("Dequeued element: " + queue.dequeue());
+        }
+
+        // Check if the queue is empty
+        System.out.println("The queue is empty: " + queue.isEmpty());
 
         // Testing MyMinHeap
         // Insert elements into the heap
@@ -22,7 +44,7 @@ public class Main {
         System.out.println("Minimum element after extraction: " + minHeap.peekMin());
 
         // Check if the heap is empty
-        System.out.println("Is the heap empty? " + minHeap.isEmpty());
+        System.out.println("The heap is empty: " + minHeap.isEmpty());
 
         // Testing MyStack
         stack.push(12);
@@ -32,12 +54,33 @@ public class Main {
         // Print the top item of the stack
         System.out.println("Top item of the stack: " + stack.peek());
 
-        // Pop items from the stack
         System.out.println("Popped item: " + stack.pop());
         System.out.println("Popped item: " + stack.pop());
 
-        // Check if the stack is empty
-        System.out.println("Is the stack empty? " + stack.isEmpty());
+        // Checking if the stack is empty
+        System.out.println("The stack is empty: " + stack.isEmpty());
+
+        // Testing MyLinkedList
+        // Adding elements to the linked list
+        linkedList.add(11);
+        linkedList.addFirst(1);
+        linkedList.addLast(22);
+
+        // Printing the first and last elements
+        System.out.println("First element: " + linkedList.getFirst());
+        System.out.println("Last element: " + linkedList.getLast());
+
+        // Removing the first element
+        linkedList.removeFirst();
+
+        System.out.println("Size of the linked list: " + linkedList.size());
+
+        // Iterating over the elements
+        Iterator<Integer> iterator = linkedList.iterator();
+        System.out.println("Elements of the linked list:");
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
 
         // Testing MyArrayList
         // Adding elements
@@ -75,7 +118,7 @@ public class Main {
 
         // Test lastIndexOf, exists, toArray, clear
         System.out.println("Last index of 50: " + myList.lastIndexOf(50));
-        System.out.println("45 exists in the list? " + myList.exists(45));
+        System.out.println("45 exists in the list: " + myList.exists(45));
         Object[] array = myList.toArray();
         System.out.println("Array representation of the list: ");
         for (Object item : array) {
