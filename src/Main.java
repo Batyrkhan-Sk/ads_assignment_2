@@ -2,6 +2,27 @@ public class Main {
     public static void main(String[] args) {
         MyArrayList<Integer> myList = new MyArrayList<>();
         MyStack<Integer> stack = new MyStack<>();
+        MyMinHeap<Integer> minHeap = new MyMinHeap<>();
+
+        // Testing MyMinHeap
+        // Insert elements into the heap
+        minHeap.insert(10);
+        minHeap.insert(5);
+        minHeap.insert(15);
+        minHeap.insert(3);
+        minHeap.insert(8);
+
+        // Print the minimum element (peek)
+        System.out.println("Minimum element: " + minHeap.peekMin());
+
+        // Extract and print the minimum element
+        System.out.println("Extracted minimum element: " + minHeap.extractMin());
+
+        // Print the minimum element after extraction
+        System.out.println("Minimum element after extraction: " + minHeap.peekMin());
+
+        // Check if the heap is empty
+        System.out.println("Is the heap empty? " + minHeap.isEmpty());
 
         // Testing MyStack
         stack.push(12);
